@@ -52,7 +52,7 @@ public class WaterPokemon extends Pokemon {
 
     public void rainDance() {
         this.waterPressure += 20;
-        System.out.println(getName() + " summons a rainstorm! Water attacks are now more powerful. \n - water pressure is now: " + waterPressure);
+        System.out.println(getName() + " summons a rainstorm! Water attacks are now more powerful. \n- water pressure is now: " + waterPressure + "\n");
     }
 
     public void bubbleBoost(Pokemon opponent) {
@@ -65,7 +65,7 @@ public class WaterPokemon extends Pokemon {
 
     public void absorbWater() {
         this.hydrationLevel += 10;
-        System.out.println(getName() + " absorbs water, increasing its hydration level to " + hydrationLevel + ".");
+        System.out.println(getName() + " absorbs water, increasing its hydration level to " + hydrationLevel + ".\n");
     }
 
 }

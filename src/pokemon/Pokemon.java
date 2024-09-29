@@ -77,6 +77,11 @@ public abstract class Pokemon {
         this.xp = xp;
     }
 
+    public String toString() {
+        return "\n" + name + " is a " + type + " Pokemon with a weight of " + weight + " kg and a height of " + height +
+                " m. \n -Level: " + level + "\n -HP: " + hp + "\n -XP: " + xp + "\n";
+    }
+
 
     public abstract void eats();
 
@@ -86,38 +91,37 @@ public abstract class Pokemon {
         level++;
         hp += 10;
         xp = 0;
-        System.out.println(name + " leveled up to level " + level + "! \n - hp is now: " + hp + " \n - xp is now: " + xp + "\n");
+        System.out.println(name + " leveled up to level " + level + "! \n- hp is now: " + hp + " \n- xp is now: " + xp + "\n");
     }
 
     public void takeDamage(int damage) {
         hp -= damage;
         if (hp <= 0) {
             hp = 0;
-            System.out.println(name + " has passed out.");
+            System.out.println(name + " has passed out.\n");
         } else {
-            System.out.println(name + " took " + damage + " damage. \n - hp is now: " + hp + "\n");
+            System.out.println(name + " took " + damage + " damage points. \n- hp of " + name + " is now: " + hp + "\n");
         }
     }
 
     public void gainExperience(int experience) {
         xp += experience;
-        System.out.println(name + " gained " + experience + " experience! \n - xp is now: " + xp + "\n");
+        System.out.println(name + " gained " + experience + " experience points! \n- xp is now: " + xp + "\n");
     }
 
     public void attack(Pokemon opponent) {
         int damage = (hp + xp + level)/5;
 
         System.out.println(name + " attacks " + opponent.getName() + " with level " + opponent.getLevel() + ".");
-        System.out.println("It's a fierce fight! " + name + " brings " + damage + " damage to " + opponent.getName() + " with level " + opponent.getName() + ".");
+        System.out.println("It's a fierce fight! " + name + " brings " + damage + " damage to " + opponent.getName() + ".");
+        System.out.println("The fight is over!");
         opponent.takeDamage(damage);
         if (opponent.getHp() < 10) {
-            System.out.println(opponent.getName() + " is barely holding on!");
+            System.out.println(opponent.getName() + " is barely holding on!\n");
         }
 
         if (opponent.getHp() <= 0) {
-            System.out.println(opponent.getName() + " has passed out.");
+            System.out.println(opponent.getName() + " has passed out.\n");
         }
-        System.out.println("The fight is over! \n Hp of " + opponent.getName() + " is now: " + opponent.getHp() + ".");
     }
-
 }

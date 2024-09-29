@@ -44,12 +44,12 @@ public class GrassPokemon extends Pokemon {
     public void photosynthesis() {
         int healthRecovered = 20;
         setHp(getHp() + healthRecovered);
-        System.out.println(getName() + " absorbs sunlight and restores " + healthRecovered + " hp! \n - hp is now: " + getHp());
+        System.out.println(getName() + " absorbs sunlight and restores " + healthRecovered + " hp! \n- hp is now: " + getHp());
     }
 
     public void grow() {
         amountOfLeaves += 10;
-        System.out.println(getName() + " grows and has now " + amountOfLeaves + " leaves.");
+        System.out.println(getName() + " grows and has now " + amountOfLeaves + " leaves.\n");
     }
 
     public void leafStorm(Pokemon opponent) {

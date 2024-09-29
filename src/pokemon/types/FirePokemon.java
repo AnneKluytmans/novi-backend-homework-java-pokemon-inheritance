@@ -52,11 +52,11 @@ public class FirePokemon extends Pokemon {
 
     public void increaseTemperature(int amount) {
         this.temperature += amount;
-        System.out.println(getName() + "'s temperature raised to " + temperature + " degrees! Its attacks become more powerful.");
+        System.out.println(getName() + "'s temperature raised to " + temperature + " degrees! Its attacks become more powerful.\n");
     }
 
     public void flameThrower() {
-        System.out.println(getName() + " releases a massive burst of flames, scorching everything in its path!");
+        System.out.println(getName() + " releases a massive burst of flames, scorching everything in its path!\n");
     }
 
     public void pyroBall(Pokemon opponent) {
@@ -67,7 +67,7 @@ public class FirePokemon extends Pokemon {
 
         if (burned) {
             opponent.setHp(0);
-            System.out.println(opponent.getName() + " is burned by the intense flames of the Pyro Ball! \n - hp is now: " + opponent.getHp());
+            System.out.println(opponent.getName() + " is burned by the intense flames of the Pyro Ball!");
         }
         opponent.takeDamage(damage);
 

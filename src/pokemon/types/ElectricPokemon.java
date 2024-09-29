@@ -43,7 +43,7 @@ public class ElectricPokemon extends Pokemon {
 
     public void chargeUp() {
         voltageLevel += 20;
-        System.out.println(getName() + " charges up! \n Voltage level is now: " + voltageLevel + " volts");
+        System.out.println(getName() + " charges up! \nVoltage level is now: " + voltageLevel + " volts\n");
     }
 
     public void thunderPunch(Pokemon opponent) {
@@ -55,7 +55,7 @@ public class ElectricPokemon extends Pokemon {
     public void paralyze(Pokemon opponent) {
         voltageLevel -= 20;
         System.out.println(getName() + " uses Paralyze on " + opponent.getName() + "! \n" + opponent.getName() +
-                "is paralyzed for a few moments and may not be able to move. \n - Voltage level of " + getName() +
-                " is now: " + voltageLevel + " volts");
+                " is paralyzed for a few moments and may not be able to move. \n- Voltage level of " + getName() +
+                " is now: " + voltageLevel + " volts\n");
     }
 }
