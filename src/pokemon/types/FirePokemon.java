@@ -60,7 +60,7 @@ public class FirePokemon extends Pokemon {
     }
 
     public void pyroBall(Pokemon opponent) {
-        int damage = 50;
+        int damage = (int) ((flameSize + temperature) / 5);
         boolean burned = Math.random() < 0.4;
 
         System.out.println(getName() + " launches a massive Pyro Ball at " + opponent.getName());

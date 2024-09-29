@@ -47,7 +47,7 @@ public class ElectricPokemon extends Pokemon {
     }
 
     public void thunderPunch(Pokemon opponent) {
-        int damage = voltageLevel / 5;
+        int damage = voltageLevel / 2;
         System.out.println(getName() + " unleashes Thunder Punch on " + opponent.getName());
         opponent.takeDamage(damage);
     }

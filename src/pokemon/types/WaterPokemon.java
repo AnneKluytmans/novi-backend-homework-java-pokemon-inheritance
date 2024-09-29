@@ -56,7 +56,7 @@ public class WaterPokemon extends Pokemon {
     }
 
     public void bubbleBoost(Pokemon opponent) {
-        int damage = 10;
+        int damage = waterPressure / 2;
         this.swimSpeed += 5.25f;
         System.out.println(getName() + " creates a powerful stream of water bubbles increasing its speed to " +
                 swimSpeed + " and attacking " + opponent.getName() + ".");
