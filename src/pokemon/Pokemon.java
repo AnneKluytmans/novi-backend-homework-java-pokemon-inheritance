@@ -105,7 +105,7 @@ public abstract class Pokemon {
     }
 
     public void attack(Pokemon opponent) {
-        int damage = (int) (Math.random() * level * 5);
+        int damage = (hp + xp + level)/5;
 
         System.out.println(name + " attacks " + opponent.getName() + " with level " + opponent.getLevel() + ".");
         System.out.println("It's a fierce fight! " + name + " brings " + damage + " damage to " + opponent.getName() + " with level " + opponent.getName() + ".");

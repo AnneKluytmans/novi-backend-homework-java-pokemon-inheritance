@@ -52,7 +52,7 @@ public class FirePokemon extends Pokemon {
 
     public void increaseTemperature(int amount) {
         this.temperature += amount;
-        System.out.println(getName() + "'s temperature raised to " + temperature + " degrees! His attacks become more powerful.");
+        System.out.println(getName() + "'s temperature raised to " + temperature + " degrees! Its attacks become more powerful.");
     }
 
     public void flameThrower() {
