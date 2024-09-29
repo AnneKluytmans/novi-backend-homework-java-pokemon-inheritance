@@ -63,12 +63,13 @@ public class FirePokemon extends Pokemon {
         int damage = 50;
         boolean burned = Math.random() < 0.4;
 
-        opponent.takeDamage(damage);
-        System.out.println(getName() + " launches a massive Pyro Ball at " + opponent.getName() + ", dealing " + damage + " damage!");
+        System.out.println(getName() + " launches a massive Pyro Ball at " + opponent.getName());
 
         if (burned) {
             opponent.setHp(0);
             System.out.println(opponent.getName() + " is burned by the intense flames of the Pyro Ball! \n - hp is now: " + opponent.getHp());
         }
+        opponent.takeDamage(damage);
+
     }
 }
