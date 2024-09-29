@@ -78,9 +78,9 @@ public abstract class Pokemon {
     }
 
 
-    public abstract void eat();
+    public abstract void eats();
 
-    public abstract void makeSound();
+    public abstract void speaks();
 
     public void levelUp() {
         level++;

@@ -31,12 +31,12 @@ public class ElectricPokemon extends Pokemon {
 
 
     @Override
-    public void eat() {
+    public void eats() {
         System.out.println(getName() + " absorbs lightning from a storm, to boost his energy!");
     }
 
     @Override
-    public void makeSound() {
+    public void speaks() {
         System.out.println(getName() + " lets out a high-intense roar, like a bolt of lightning striking.");
     }
 
@@ -46,10 +46,10 @@ public class ElectricPokemon extends Pokemon {
         System.out.println(getName() + " charges up! \n Voltage level is now: " + voltageLevel + " volts");
     }
 
-    public void thunderShock(Pokemon opponent) {
+    public void thunderPunch(Pokemon opponent) {
         int damage = voltageLevel / 5;
         opponent.takeDamage(damage);
-        System.out.println(getName() + " unleashes Thunder Shock on " + opponent.getName() + ", bringing " + damage + " damage.");
+        System.out.println(getName() + " unleashes Thunder Punch on " + opponent.getName() + ", bringing " + damage + " damage.");
     }
 
     public void paralyze(Pokemon opponent) {
