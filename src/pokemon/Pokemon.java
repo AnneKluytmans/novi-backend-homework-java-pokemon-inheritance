@@ -1,8 +1,11 @@
 package pokemon;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Pokemon {
     private String name;
-    private String type;
+    private List<String> type = new ArrayList<String>();
     private float weight;
     private float height;
     private int level;
@@ -12,7 +15,7 @@ public abstract class Pokemon {
 
     public Pokemon(String name, String type, float weight, float height, int level, int hp, int xp) {
         this.name = name;
-        this.type = type;
+        this.type.add(type);
         this.weight = weight;
         this.height = height;
         this.level = level;
@@ -25,7 +28,7 @@ public abstract class Pokemon {
         return name;
     }
 
-    public String getType() {
+    public List<String> getType() {
         return type;
     }
 
@@ -53,8 +56,8 @@ public abstract class Pokemon {
         this.name = name;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void addType(String type) {
+        this.type.add(type);
     }
 
     public void setWeight(float weight) {

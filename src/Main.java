@@ -5,18 +5,18 @@ import pokemon.types.WaterPokemon;
 
 public class Main {
     public static void main(String[] args) {
-        GrassPokemon ivysaur = new GrassPokemon("Ivysaur", "Grass", 13.0f, 1.0f, 46, 48, 44, 12, 53);
-        FirePokemon charmeleon = new FirePokemon("Charmeleon", "Fire", 19.0f, 1.1f, 38, 48, 50, 45f, 8, 20);
-        WaterPokemon blastoise = new WaterPokemon("Blastoise", "Water", 85.5f, 1.6f, 63,60, 66, 24, 42.4f, 6);
-        ElectricPokemon pikachu = new ElectricPokemon("Pikachu", "Electric", 6.0f, 0.4f, 28, 36, 33, 24, 6);
+        GrassPokemon bulbasaur = new GrassPokemon("Bulbasaur",13.0f, 1.0f, 18, 48, 198, 60, 153);
+        FirePokemon charmander = new FirePokemon("Charmander", 19.0f, 1.1f, 12, 39, 100, 185f, 8, 20);
+        WaterPokemon blastoise = new WaterPokemon("Blastoise",85.5f, 1.6f, 52,60, 492, 24, 42.4f, 6);
+        ElectricPokemon pikachu = new ElectricPokemon("Pikachu",6.0f, 0.4f, 22, 55, 200, 1000, 6);
 
-        System.out.println(ivysaur.toString());
-        ivysaur.eats();
-        ivysaur.speaks();
+        System.out.println(bulbasaur.toString());
+        bulbasaur.eats();
+        bulbasaur.speaks();
 
-        System.out.println(charmeleon.toString());
-        charmeleon.eats();
-        charmeleon.speaks();
+        System.out.println(charmander.toString());
+        charmander.eats();
+        charmander.speaks();
 
         System.out.println(blastoise.toString());
         blastoise.eats();
@@ -28,36 +28,36 @@ public class Main {
 
         System.out.println("\n---------Time to play---------------\n");
 
-        pikachu.attack(charmeleon);
+        pikachu.attack(charmander);
         pikachu.levelUp();
 
 
         blastoise.rainDance();
 
-        ivysaur.photosynthesis();
+        bulbasaur.photosynthesis();
 
-        blastoise.bubbleBoost(ivysaur);
+        blastoise.bubbleBoost(bulbasaur);
 
-        charmeleon.pyroBall(blastoise);
+        charmander.pyroBall(blastoise);
 
-        pikachu.paralyze(ivysaur);
+        pikachu.paralyze(bulbasaur);
 
-        ivysaur.leafStorm(charmeleon);
+        bulbasaur.leafStorm(charmander);
 
         blastoise.absorbWater();
 
-        ivysaur.levelUp();
+        bulbasaur.levelUp();
 
         pikachu.gainExperience(6);
 
-        charmeleon.flameThrower();
+        charmander.flameThrower();
 
-        pikachu.thunderPunch(ivysaur);
+        pikachu.thunderPunch(bulbasaur);
         pikachu.eats();
         pikachu.chargeUp();
 
-        ivysaur.grow();
+        bulbasaur.grow();
 
-        charmeleon.increaseTemperature(8);
+        charmander.increaseTemperature(8);
     }
 }

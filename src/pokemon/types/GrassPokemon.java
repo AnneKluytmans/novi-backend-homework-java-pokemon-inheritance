@@ -6,8 +6,8 @@ public class GrassPokemon extends Pokemon {
     private float chlorofylLevel;
     private int amountOfLeaves;
 
-    public GrassPokemon(String name, String type, float weight, float height, int level, int hp, int xp, float chlorofylLevel, int amountOfLeaves) {
-        super(name, type, weight, height, level, hp, xp);
+    public GrassPokemon(String name, float weight, float height, int level, int hp, int xp, float chlorofylLevel, int amountOfLeaves) {
+        super(name, "Grass", weight, height, level, hp, xp);
         this.chlorofylLevel = chlorofylLevel;
         this.amountOfLeaves = amountOfLeaves;
     }
@@ -57,5 +57,6 @@ public class GrassPokemon extends Pokemon {
         System.out.println(getName() + " starts a wild and heavy Leaf Storm on " + opponent.getName() + "! " +
                 "It will gradually drain its health.");
         opponent.takeDamage(damage);
+        levelUp();
     }
 }

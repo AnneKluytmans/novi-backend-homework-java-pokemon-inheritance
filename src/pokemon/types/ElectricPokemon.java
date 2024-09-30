@@ -6,8 +6,8 @@ public class ElectricPokemon extends Pokemon {
     private int voltageLevel;
     private int batteryLife;
 
-    public ElectricPokemon(String name, String type, float weight, float height, int level, int hp, int xp, int voltageLevel, int batteryLife) {
-        super(name, type, weight, height, level, hp, xp);
+    public ElectricPokemon(String name, float weight, float height, int level, int hp, int xp, int voltageLevel, int batteryLife) {
+        super(name, "Electric", weight, height, level, hp, xp);
         this.voltageLevel = voltageLevel;
         this.batteryLife = batteryLife;
     }
@@ -50,6 +50,7 @@ public class ElectricPokemon extends Pokemon {
         int damage = voltageLevel / 2;
         System.out.println(getName() + " unleashes Thunder Punch on " + opponent.getName());
         opponent.takeDamage(damage);
+        levelUp();
     }
 
     public void paralyze(Pokemon opponent) {

@@ -7,8 +7,8 @@ public class FirePokemon extends Pokemon {
     private int flameSize;
     private int rageIndex;
 
-    public FirePokemon(String name, String type, float weight, float height, int level, int hp, int xp, float temperature, int flameSize, int rageIndex) {
-        super(name, type, weight, height, level, hp, xp);
+    public FirePokemon(String name, float weight, float height, int level, int hp, int xp, float temperature, int flameSize, int rageIndex) {
+        super(name, "Fire", weight, height, level, hp, xp);
         this.temperature = temperature;
         this.flameSize = flameSize;
         this.rageIndex = rageIndex;
@@ -70,6 +70,6 @@ public class FirePokemon extends Pokemon {
             System.out.println(opponent.getName() + " is burned by the intense flames of the Pyro Ball!");
         }
         opponent.takeDamage(damage);
-
+        levelUp();
     }
 }

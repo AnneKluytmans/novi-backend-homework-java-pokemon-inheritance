@@ -7,8 +7,8 @@ public class WaterPokemon extends Pokemon {
     private float swimSpeed;
     private int waterPressure;
 
-    public WaterPokemon(String name, String type, float weight, float height, int level, int hp, int xp, int hydrationLevel, float swimSpeed, int waterPressure) {
-        super(name, type, weight, height, level, hp, xp);
+    public WaterPokemon(String name, float weight, float height, int level, int hp, int xp, int hydrationLevel, float swimSpeed, int waterPressure) {
+        super(name, "Water", weight, height, level, hp, xp);
         this.hydrationLevel = hydrationLevel;
         this.swimSpeed = swimSpeed;
         this.waterPressure = waterPressure;
@@ -61,6 +61,7 @@ public class WaterPokemon extends Pokemon {
         System.out.println(getName() + " creates a powerful stream of water bubbles increasing its speed to " +
                 swimSpeed + " and attacking " + opponent.getName() + ".");
         opponent.takeDamage(damage);
+        levelUp();
     }
 
     public void absorbWater() {
