@@ -20,7 +20,7 @@ The goal of this assignment is to practice **object-oriented programming** in Ja
 
 ## Tech Stack
 
-- **Java 17**+
+- **Java 17+**
 - **IntelliJ IDEA**
 
 ---
@@ -38,20 +38,12 @@ The goal of this assignment is to practice **object-oriented programming** in Ja
 
 ## How to Run
 
-1. Clone the repository:
-   ```bash
-    git@github.com:AnneKluytmans/novi-backend-homework-java-pokemon-inheritance.git
-    ```
-   or
+1. Open the project in your IDE (IntelliJ IDEA)
+2. Navigate to the `Main` class
+3. Locate the `main` method and click the green play button to **Run 'Main'** or use the terminal:
     ```bash
-    git clone https://github.com/AnneKluytmans/novi-backend-homework-java-pokemon-inheritance.git 
-    ```
-2. Open the project in your IDE (IntelliJ IDEA)
-3. Navigate to the `Main` class
-4. Locate the `main` method and click the green play button → select **Run 'Main'** or use the terminal:
-```bash
-./mvnw clean compile exec:java
-```
+   mvn clean compile exec:java
+   ```
 
 ## Credits
 > "This assignment was developed as part of the Backend Java module in the NOVI Software Development program. All instructions, logic, and structure are part of the official coursework."
